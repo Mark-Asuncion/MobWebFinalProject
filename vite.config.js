@@ -8,7 +8,17 @@ export default {
         }
     },
     build: {
-        outDir: '../dist'
+        outDir: '../dist',
+        rollupOptions: {
+            input: {
+                main: './src/index.html',
+                applicant: './src/applicant.html',
+                submit: "./src/submit.html",
+                confirm: "./src/confirm.html",
+                contact: "./src/contact.html",
+                prevschool: "./src/prevschool.html"
+            },
+        },
     },
     server: {
         port: 8080
