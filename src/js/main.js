@@ -9,6 +9,7 @@ window.next = (nextPage) => {
 
     let missingFields = false;
     inputs.forEach((el) => {
+        let pat = new RegExp(el.pattern);
         if (el.type == "radio") {
             if (el.checked) {
                 required[el.name] = el.value;
