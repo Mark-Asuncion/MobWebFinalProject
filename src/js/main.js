@@ -13,6 +13,7 @@ window.next = (nextPage) => {
         if (el.type == "radio") {
             if (el.checked) {
                 required[el.name] = el.value;
+                return;
             }
         }
         else if (el.required) {
@@ -59,7 +60,7 @@ window.next = (nextPage) => {
             }
         }
         else {
-            cached = require;
+            cached = required;
         }
         console.log(cached)
         window.localStorage.setItem("store", JSON.stringify(cached));
